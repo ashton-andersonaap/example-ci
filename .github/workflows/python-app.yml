@@ -39,9 +39,6 @@ jobs:
     - name: Test with pytest
       run: |
         pytest --cov-report "xml:coverage.xml" --cov=.
-    - name: Sphinx build
-      run: |
-        sphinx-build doc _build
     - name: Create Coverage
       if: ${{ github.event_name == 'pull_request' }}
       uses: orgoro/coverage@v3
